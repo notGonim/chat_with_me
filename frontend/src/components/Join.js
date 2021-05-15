@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 
+import './join.css'
 export const Join = () => {
 
     const [name, setName] = useState('')
@@ -18,9 +19,9 @@ export const Join = () => {
         <div className="joinOuterContainer">
             <div className="joinInnerContainer">
                 <h1 className="heading">Join</h1>
-                <input type="text" value={name} placeholder="Name" onChange={(e) => setName(e.target.value)} />
-                <input type="text" value={room} placeholder="Room" onChange={(e) => setRoom(e.target.value)} />
-                <button type="submit" className="btn mt-20" onClick={signIn} >Sign In</button>
+                <input className="joinInput" type="text" value={name} placeholder="Name" onChange={(e) => setName(e.target.value)} />
+                <input className="joinInput" type="text" value={room} placeholder="Room" onChange={(e) => setRoom(e.target.value)} />
+                <button type="submit" className="button mt-20" onClick={signIn} >Sign In</button>
             </div>
         </div>
     )
